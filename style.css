@@ -1,0 +1,54 @@
+& {
+  --bgcolor: rgb(32,32,32);
+  --fgcolor: antiquewhite;
+  --hicolor: springgreen;
+}
+
+body {
+  background: var(--bgcolor);
+  color: var(--fgcolor);
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  margin: 0 auto;
+  width: 600px;
+
+  ::selection {
+    background: var(--fgcolor);
+    color: var(--bgcolor);
+  }
+}
+
+header {
+  h1 {
+    color: var(--hicolor);
+    font-weight: 400;
+    text-decoration: underline wavy;
+  }
+
+  p {
+    margin: 1ex 0;
+  }
+
+  img {
+    border-radius: 50%;
+    float: right;
+    width: 25%;
+  }
+}
+
+a {
+  color: var(--hicolor);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--fgcolor);
+    text-decoration: underline wavy;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+.mail > :first-child::after {
+  content: "@";
+}
